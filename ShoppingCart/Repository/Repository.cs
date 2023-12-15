@@ -1,23 +1,27 @@
-﻿using ShoppingCart.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoppingCart.Data;
 
 namespace ShoppingCart.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
         private readonly ShoppingCartContext _context;
+        private DbSet<T> dbSet;
 
         public Repository(ShoppingCartContext context)
         {
             _context = context;
+            this.dbSet = _context.Set<T>();
         }
-        public void Delete(int id)
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            dbSet.Remove(entity);
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = dbSet;
+            return query.ToList();
         }
 
         public T GetById(int id)
@@ -29,6 +33,11 @@ namespace ShoppingCart.Repository
         {
             _context.Add(entity);
             _context.SaveChanges();
+        }
+
+        public void RemoveRange(IEnumerable<T> entity)
+        {
+            dbSet.RemoveRange(entity);
         }
 
         public void Save()
