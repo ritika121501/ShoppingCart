@@ -8,7 +8,8 @@ namespace ShoppingCart.Repository
         T GetById(int id);
         void Insert(T entity);
         void Update(T entity);
-        void Delete(int id);
+        void Delete(T entity);
         void Save();
+        void RemoveRange(IEnumerable<T> entity);
     }
 }
