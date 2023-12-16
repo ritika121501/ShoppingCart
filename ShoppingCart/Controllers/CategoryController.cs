@@ -1,22 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShoppingCart.Data;
 using ShoppingCart.Models;
+using ShoppingCart.Repository;
 using ShoppingCart.Utility;
 
 namespace ShoppingCart.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ShoppingCartContext _context;
-
-        public CategoryController(ShoppingCartContext context)
+        private readonly IRepository<Category> _repo;
+        public CategoryController(IRepository<Category> repo)
         {
-            _context = context;
+            _repo = repo;
         }
+
         [HttpGet]
         public IActionResult Index()
         {
-            var data = _context.Category.ToList();
+            var data = _repo.GetAll();
             return View(data);
         }
         [HttpGet]
@@ -34,8 +35,7 @@ namespace ShoppingCart.Controllers
             }
             if (ModelState.IsValid)
             {
-                _context.Category.Add(category);
-                _context.SaveChanges();
+                _repo.Insert(category);
                 return RedirectToAction("Index");
             }
             return View();
@@ -49,7 +49,7 @@ namespace ShoppingCart.Controllers
             { 
                 return NotFound();
             }
-            var category = _context.Category.Find(id);
+            var category = _repo.GetById(id);
             if(category == null)
             {
                 return NotFound();
@@ -70,8 +70,7 @@ namespace ShoppingCart.Controllers
             }
             if (ModelState.IsValid)
             {
-                _context.Category.Add(category);
-                _context.SaveChanges();
+                _repo.Update(category);
                 return RedirectToAction("Index");
             }
             return View();
