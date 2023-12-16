@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ShoppingCart.Data;
+using ShoppingCart.Models;
+using ShoppingCart.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ShoppingCartContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
-
+builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
 var app = builder.Build();
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShoppingCart.Data;
+using System.Linq.Expressions;
 
 namespace ShoppingCart.Repository
 {
@@ -16,6 +17,13 @@ namespace ShoppingCart.Repository
         public void Delete(T entity)
         {
             dbSet.Remove(entity);
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            IQueryable<T> query = dbSet;
+            query.Where(filter);
+            return query.FirstOrDefault();
         }
 
         public IEnumerable<T> GetAll()
@@ -38,11 +46,6 @@ namespace ShoppingCart.Repository
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbSet.RemoveRange(entity);
-        }
-
-        public void Save()
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(T entity)
