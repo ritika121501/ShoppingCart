@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NToastNotify;
 using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
@@ -9,9 +10,11 @@ namespace ShoppingCart.Controllers
     public class CategoryController : Controller
     {
         private readonly IRepository<Category> _repo;
-        public CategoryController(IRepository<Category> repo)
+        private readonly IToastNotification _toastNotification;
+        public CategoryController(IRepository<Category> repo, IToastNotification toastNotification)
         {
             _repo = repo;
+            _toastNotification = toastNotification;
         }
 
         [HttpGet]
@@ -36,6 +39,7 @@ namespace ShoppingCart.Controllers
             if (ModelState.IsValid)
             {
                 _repo.Insert(category);
+                _toastNotification.AddSuccessToastMessage("Category Added Successfully");
                 return RedirectToAction("Index");
             }
             return View();
@@ -71,6 +75,7 @@ namespace ShoppingCart.Controllers
             if (ModelState.IsValid)
             {
                 _repo.Update(category);
+                _toastNotification.AddSuccessToastMessage("Category Updated Successfully");
                 return RedirectToAction("Index");
             }
             return View();

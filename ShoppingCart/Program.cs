@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using NToastNotify;
 using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
@@ -10,6 +11,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ShoppingCartContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+
+//Add Toast notification service
+builder.Services.AddRazorPages().AddNToastNotifyNoty(new NotyOptions
+{
+    ProgressBar = true,
+    Timeout = 2000
+});
+
 
 var app = builder.Build();
 
