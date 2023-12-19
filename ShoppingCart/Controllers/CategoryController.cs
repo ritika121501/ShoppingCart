@@ -75,5 +75,18 @@ namespace ShoppingCart.Controllers
             }
             return View();
         }
+        public IActionResult Delete(int id, string name)
+        {
+            var a = _context.Category.Where(i => (i.DisplayOrder == id && i.Name == name)).FirstOrDefault();
+
+            if (a != null)
+            {
+                _context.Category.Remove(a);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
+    
     }
 }
