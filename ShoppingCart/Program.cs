@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ShoppingCartContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 
 var app = builder.Build();
 
