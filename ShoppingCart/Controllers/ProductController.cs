@@ -33,6 +33,7 @@ namespace ShoppingCart.Controllers
             {
                 ModelState.AddModelError("Title", "Test is not a valid input");
             }
+            //test
             if (ModelState.IsValid)
             {
                 _repo.Insert(product);
