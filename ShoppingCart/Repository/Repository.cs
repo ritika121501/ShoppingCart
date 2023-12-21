@@ -17,6 +17,7 @@ namespace ShoppingCart.Repository
         public void Delete(T entity)
         {
             dbSet.Remove(entity);
+            _context.SaveChanges();
         }
 
         public T Get(Expression<Func<T, bool>> filter)
