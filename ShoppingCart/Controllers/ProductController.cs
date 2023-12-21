@@ -33,7 +33,27 @@ namespace ShoppingCart.Controllers
             {
                 ModelState.AddModelError("Title", "Test is not a valid input");
             }
-            //test
+
+            if (string.IsNullOrWhiteSpace(product.Title))
+            {
+                ModelState.AddModelError("Title", "Title yet to be decided");
+
+            }
+            if (string.IsNullOrWhiteSpace(product.Author))
+            {
+                ModelState.AddModelError("Author", "Author yet to be decided");
+
+            }
+            if (string.IsNullOrWhiteSpace(product.ISBN))
+            {
+                ModelState.AddModelError("ISBN", "ISBN yet to be decided");
+
+            }
+            if (!(product.ListPrice > 0))
+            {
+                ModelState.AddModelError("ListPrice", "ListPrice yet to be decided");
+
+            }
             if (ModelState.IsValid)
             {
                 _repo.Insert(product);
