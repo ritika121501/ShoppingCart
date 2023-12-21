@@ -33,12 +33,23 @@ namespace ShoppingCart.Controllers
             {
                 ModelState.AddModelError("Title", "Test is not a valid input");
             }
+
+            if (IsInvalidData(product.Description))
+                ModelState.AddModelError("Description", "Test is not a valid input");
+            if (IsInvalidData(product.ISBN))
+                ModelState.AddModelError("ISBN", "Test is not a valid input");
+            if (IsInvalidData(product.Author))
+                ModelState.AddModelError("Author", "Test is not a valid input");
             if (ModelState.IsValid)
             {
                 _repo.Insert(product);
                 return RedirectToAction("Index");
             }
             return View();
+        }
+        static bool IsInvalidData(string inputData)
+        {
+            return ConstantValues.TestData.Equals(inputData, StringComparison.OrdinalIgnoreCase);
         }
 
         [HttpGet]
