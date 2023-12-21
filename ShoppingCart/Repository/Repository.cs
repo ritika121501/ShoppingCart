@@ -34,7 +34,7 @@ namespace ShoppingCart.Repository
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return dbSet.Find(id);
         }
 
         public void Insert(T entity)
@@ -50,7 +50,8 @@ namespace ShoppingCart.Repository
 
         public void Update(T entity)
         {
-            throw new NotImplementedException();
+            _context.Update(entity);
+            _context.SaveChanges();
         }
     }
 }
