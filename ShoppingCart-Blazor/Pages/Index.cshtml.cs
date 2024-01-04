@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ShoppingCart_Blazor.Pages
+namespace ShoppingCart_Razor.Pages
 {
     public class IndexModel : PageModel
     {

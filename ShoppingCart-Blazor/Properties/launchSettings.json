@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "ShoppingCart_Blazor": {
+    "ShoppingCart_Razor": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

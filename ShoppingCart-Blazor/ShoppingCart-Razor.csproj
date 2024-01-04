@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>ShoppingCart_Blazor</RootNamespace>
+    <RootNamespace>ShoppingCart_Razor</RootNamespace>
   </PropertyGroup>
 
 	<ItemGroup>

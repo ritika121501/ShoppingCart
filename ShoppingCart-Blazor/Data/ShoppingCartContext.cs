@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ShoppingCart_Blazor.Models;
+using ShoppingCart_Razor.Models;
 
-namespace ShoppingCart_Blazor.Data
+namespace ShoppingCart_Razor.Data
 {
     public class ShoppingCartContext : DbContext
     {
