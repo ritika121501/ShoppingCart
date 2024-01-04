@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ShoppingCart_Blazor.Data;
+using ShoppingCart_Razor.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

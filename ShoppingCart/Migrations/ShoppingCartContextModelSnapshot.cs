@@ -74,6 +74,9 @@ namespace ShoppingCart.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -91,6 +94,8 @@ namespace ShoppingCart.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Products");
 
                     b.HasData(
@@ -98,6 +103,7 @@ namespace ShoppingCart.Migrations
                         {
                             Id = 1,
                             Author = "Harper Lee",
+                            CategoryId = 0,
                             Description = "believed to be one of the most influential authors to have ever existed, famously published only a single novel",
                             ISBN = "SWV0001",
                             ListPrice = 99.0,
@@ -107,6 +113,7 @@ namespace ShoppingCart.Migrations
                         {
                             Id = 2,
                             Author = "Nick Carraway",
+                            CategoryId = 0,
                             Description = "is distinguished as one of the greatest texts for introducing students to the art of reading literature critically ",
                             ISBN = "SWV00078",
                             ListPrice = 100.0,
@@ -116,11 +123,23 @@ namespace ShoppingCart.Migrations
                         {
                             Id = 3,
                             Author = "Gabriel García Márquez",
+                            CategoryId = 0,
                             Description = "The novel tells the story of seven generations of the Buendía family and follows the establishment of their town",
                             ISBN = "SWV0002",
                             ListPrice = 101.0,
                             Title = "One Hundred Years of Solitude"
                         });
+                });
+
+            modelBuilder.Entity("ShoppingCart.Models.Product", b =>
+                {
+                    b.HasOne("ShoppingCart.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

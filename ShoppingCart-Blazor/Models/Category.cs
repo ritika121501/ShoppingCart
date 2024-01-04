@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ShoppingCart_Blazor.Models
+namespace ShoppingCart_Razor.Models
 {
     public class Category
     {

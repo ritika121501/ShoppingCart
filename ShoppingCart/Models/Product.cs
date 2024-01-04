@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShoppingCart.Models
 {
@@ -17,5 +18,9 @@ namespace ShoppingCart.Models
         [Display(Name ="List Price")]
         [Range(1,1000)]
         public double ListPrice { get; set; }
+
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
     }
 }
