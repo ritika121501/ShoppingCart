@@ -1,0 +1,12 @@
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\bin\Debug\net6.0\ShoppingCart.DAL.deps.json
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\bin\Debug\net6.0\ShoppingCart.DAL.dll
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\bin\Debug\net6.0\ShoppingCart.DAL.pdb
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.csproj.AssemblyReference.cache
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.AssemblyInfoInputs.cache
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.AssemblyInfo.cs
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.dll
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\refint\ShoppingCart.DAL.dll
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ShoppingCart.DAL.pdb
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.DAL\obj\Debug\net6.0\ref\ShoppingCart.DAL.dll

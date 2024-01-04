@@ -1,0 +1,12 @@
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\bin\Debug\net6.0\ShoppingCart.Models.deps.json
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\bin\Debug\net6.0\ShoppingCart.Models.dll
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\bin\Debug\net6.0\ShoppingCart.Models.pdb
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.csproj.AssemblyReference.cache
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.AssemblyInfoInputs.cache
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.AssemblyInfo.cs
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.csproj.CoreCompileInputs.cache
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.dll
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\refint\ShoppingCart.Models.dll
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ShoppingCart.Models.pdb
+C:\Users\Jha\Music\ShoppingCart\ShoppingCart.Models\obj\Debug\net6.0\ref\ShoppingCart.Models.dll

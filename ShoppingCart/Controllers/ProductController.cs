@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
@@ -9,9 +10,11 @@ namespace ShoppingCart.Controllers
     public class ProductController : Controller
     {
         private readonly IRepository<Product> _repo;
-        public ProductController(IRepository<Product> repo)
+        private readonly IRepository<Category> _cateRepo;
+        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo)
         {
             _repo = repo;
+            _cateRepo = cateRepo;
         }
 
         [HttpGet]
@@ -23,6 +26,12 @@ namespace ShoppingCart.Controllers
         [HttpGet]
         public IActionResult CreateProduct()
         {
+            //SelectListItem
+            IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u=> new SelectListItem
+            { 
+                Text = u.Name,
+                Value = u.CategoryId.ToString()
+            });
             return View();
         }
 
