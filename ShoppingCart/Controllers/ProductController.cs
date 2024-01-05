@@ -4,6 +4,7 @@ using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
 using ShoppingCart.Utility;
+using ShoppingCart.ViewModels;
 
 namespace ShoppingCart.Controllers
 {
@@ -32,6 +33,17 @@ namespace ShoppingCart.Controllers
                 Text = u.Name,
                 Value = u.CategoryId.ToString()
             });
+            //ViewBag it is dynamic type
+            //ViewBag.CategoryList = categoryList;
+
+            //ViewData is a type datadictionary
+            //With both viewbag and viewdata after it is read for the first time the data will not populate again
+            //ViewData["CategoryList"] = categoryList;
+            ProductVM productVM = new ProductVM()
+            {
+                Product = new Product(),
+                CategoryList = categoryList
+            };
             return View();
         }
 
@@ -47,6 +59,12 @@ namespace ShoppingCart.Controllers
                 _repo.Insert(product);
                 return RedirectToAction("Index");
             }
+            IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.CategoryId.ToString()
+            });
+            ViewData["CategoryList"] = categoryList;
             return View();
         }
 
