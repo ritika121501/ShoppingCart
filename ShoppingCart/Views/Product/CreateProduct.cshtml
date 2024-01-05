@@ -31,6 +31,13 @@
 			<input asp-for="ListPrice" type="text" class="form-control" />
 			<span asp-validation-for="ListPrice" , class="text-danger"></span>
 		</div>
+		<div class="mb-3">
+			<label class="text-primary">Category List</label>
+			<select asp-for="CategoryId" asp-items = "@(ViewData["CategoryList"] as IEnumerable<SelectListItem>)" class="form-select" >
+				<option>--Select Category--</option>
+			</select>
+			<span asp-validation-for="ListPrice" , class="text-danger"></span>
+		</div>
 		<button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
 		<a asp-controller="Product" asp-action="Index"
 		   class="btn btn-warning">Back To List</a>
