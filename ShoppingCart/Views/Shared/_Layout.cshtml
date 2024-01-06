@@ -27,11 +27,12 @@
                             <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">SelectItem</a>
-                            <div class="dropdown-menu show" data-bs-popper="static">
-                                <a class="dropdown-item" href="#"><a class=" nav-item dropdown" asp-controller="Category" asp-action="Index"> Category</a> </a>
-                                <a class="dropdown-item" href="#"><a class="nav-item dropdown" asp-controller="Product" asp-action="Index">Product </a></a>
-                       
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="Category" asp-action="Index">Category</a>
+                                <a class="dropdown-item" asp-controller="Product" asp-action="Index">Product</a>
+                                
+                              
                             </div>
                         </li>
                         </ul>  
