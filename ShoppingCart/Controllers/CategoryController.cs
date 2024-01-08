@@ -36,9 +36,15 @@ namespace ShoppingCart.Controllers
             else
             {
                 var category = _repo.GetById(id.Value);
-                return NotFound();
-            }
-        }
+                if (category == null)
+                {
+                    return NotFound();
+                }
+                return View(category);
+
+			}
+
+		}
 
 		[HttpPost]
 			public IActionResult UpsertCategory(Category category)
@@ -56,43 +62,9 @@ namespace ShoppingCart.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Edit(int id)
-        {
-            //LINQ
-            if(id==0)
-            { 
-                return NotFound();
-            }
-            var category = _repo.GetById(id);
-            if(category == null)
-            {
-                return NotFound();
-            }
-            //lambda expression
-            //var category1 = _context.Category.FirstOrDefault(x => x.CategoryId == id); 
-            //Exmaples of Linq
-            //var category2 = _context.Category.Where(category => category.Name.Contains("Comedy")).ToList();
-            return View(category);
-        }
-
-        [HttpPost]
-        public IActionResult Edit(Category category)
-        {
-            if (category.Name != null && category.Name.ToLower().Contains(ConstantValues.TestData.ToLower()))
-            {
-                ModelState.AddModelError("Name", "Test is not a valid input");
-            }
-            if (ModelState.IsValid)
-            {
-                _repo.Update(category);
-                _toastNotification.AddSuccessToastMessage("Category Updated Successfully");
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
+      
         public IActionResult Delete(Category category)
-        {
+        { 
             _repo.Delete(category);
             return RedirectToAction("Index");
         }
