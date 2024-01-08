@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NToastNotify;
 using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
@@ -12,10 +13,12 @@ namespace ShoppingCart.Controllers
     {
         private readonly IRepository<Product> _repo;
         private readonly IRepository<Category> _cateRepo;
-        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo)
+		private readonly IToastNotification _toastNotification;
+		public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo, IToastNotification toastNotification)
         {
             _repo = repo;
             _cateRepo = cateRepo;
+            _toastNotification = toastNotification;
         }
 
         [HttpGet]
@@ -83,39 +86,29 @@ namespace ShoppingCart.Controllers
                 ModelState.AddModelError("ListPrice", "ListPrice yet to be decided");
 
             }
-            if (ModelState.IsValid)
+            if (product.ImageUrl == null)
+            {
+                product.ImageUrl = "ABCDE";
+            }
+            if (ModelState.IsValid && product.Id == 0)
             {
                 _repo.Insert(product);
-                return RedirectToAction("Index");
+				_toastNotification.AddSuccessToastMessage("Product Added Successfully");
+				return RedirectToAction("Index");
             }
-            IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
-            {
-                Text = u.Name,
-                Value = u.CategoryId.ToString()
-            });
-            ViewData["CategoryList"] = categoryList;
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Edit(Product product)
-        {
-            if (product.Title != null && product.Title.ToLower().Contains(ConstantValues.TestData.ToLower()))
-            {
-                ModelState.AddModelError("Title", "Test is not a valid input");
-            }
-            if (ModelState.IsValid)
+            else
             {
                 _repo.Update(product);
-                return RedirectToAction("Index");
-            }
-            return View();
+				_toastNotification.AddSuccessToastMessage("Product Updated Successfully");
+				return RedirectToAction("Index");
+            }           
         }
-
+              
         public IActionResult Delete(Product product)
         {
             _repo.Delete(product);
-            return RedirectToAction("Index");
+			_toastNotification.AddSuccessToastMessage("Product Dekleted Successfully");
+			return RedirectToAction("Index");
         }
     }
 }
