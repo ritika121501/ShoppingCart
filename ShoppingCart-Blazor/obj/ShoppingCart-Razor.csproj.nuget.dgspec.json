@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jha\\Music\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj": {}
+    "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jha\\Music\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj": {
+    "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jha\\Music\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj",
+        "projectUniqueName": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj",
         "projectName": "ShoppingCart-Razor",
-        "projectPath": "C:\\Users\\Jha\\Music\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj",
-        "packagesPath": "C:\\Users\\Jha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jha\\Music\\ShoppingCart\\ShoppingCart-Blazor\\obj\\",
+        "projectPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart-Blazor\\ShoppingCart-Razor.csproj",
+        "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart-Blazor\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Jha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -77,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
