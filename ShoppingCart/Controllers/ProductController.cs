@@ -25,7 +25,7 @@ namespace ShoppingCart.Controllers
             return View(data);
         }
         [HttpGet]
-        public IActionResult CreateProduct()
+        public IActionResult UpsertProduct(int? id)
         {
             //SelectListItem
             IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u=> new SelectListItem
@@ -44,11 +44,19 @@ namespace ShoppingCart.Controllers
                 Product = new Product(),
                 CategoryList = categoryList
             };
-            return View(productVM);
+            if(id==null || id == 0)
+            {
+                return View(productVM);
+            }
+            else
+            {
+                productVM.Product = _repo.GetById(id.Value);
+                return View(productVM);
+            }
         }
 
         [HttpPost]
-        public IActionResult CreateProduct(Product product)
+        public IActionResult UpsertProduct(Product product)
         {
             if (product.Title != null && product.Title.ToLower().Contains(ConstantValues.TestData.ToLower()))
             {
@@ -89,26 +97,6 @@ namespace ShoppingCart.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Edit(int id)
-        {
-            //LINQ
-            if(id==0)
-            { 
-                return NotFound();
-            }
-            var Product = _repo.GetById(id);
-            if(Product == null)
-            {
-                return NotFound();
-            }
-            //lambda expression
-            //var Product1 = _context.Product.FirstOrDefault(x => x.ProductId == id); 
-            //Exmaples of Linq
-            //var Product2 = _context.Product.Where(Product => Product.Name.Contains("Comedy")).ToList();
-            return View(Product);
-        }
-
         [HttpPost]
         public IActionResult Edit(Product product)
         {
@@ -123,6 +111,7 @@ namespace ShoppingCart.Controllers
             }
             return View();
         }
+
         public IActionResult Delete(Product product)
         {
             _repo.Delete(product);
