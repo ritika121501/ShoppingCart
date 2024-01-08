@@ -4,6 +4,7 @@ using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
 using ShoppingCart.Utility;
+using ShoppingCart.ViewModels;
 
 namespace ShoppingCart.Controllers
 {
@@ -11,26 +12,36 @@ namespace ShoppingCart.Controllers
     {
         private readonly IRepository<Category> _repo;
         private readonly IToastNotification _toastNotification;
-        public CategoryController(IRepository<Category> repo, IToastNotification toastNotification)
+	
+		public CategoryController(IRepository<Category> repo, IToastNotification toastNotification)
         {
             _repo = repo;
             _toastNotification = toastNotification;
         }
 
         [HttpGet]
-        public IActionResult Index()
-        {
-            var data = _repo.GetAll();
-            return View(data);
-        }
+		public IActionResult Index()
+		{
+			var data = _repo.GetAll();
+			return View(data);
+		}
+
         [HttpGet]
-        public IActionResult CreateCategory()
+        public IActionResult UpsertCategory(int? id)
         {
-            return View();
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var category = _repo.GetById(id.Value);
+                return NotFound();
+            }
         }
 
-        [HttpPost]
-        public IActionResult CreateCategory(Category category)
+		[HttpPost]
+			public IActionResult UpsertCategory(Category category)
         {
             if (category.Name != null && category.Name.ToLower().Contains(ConstantValues.TestData.ToLower()))
             {
