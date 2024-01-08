@@ -101,8 +101,16 @@ namespace ShoppingCart.Controllers
                 _repo.Update(product);
 				_toastNotification.AddSuccessToastMessage("Product Updated Successfully");
 				return RedirectToAction("Index");
-            }           
-        }
+            }
+            //ViewData code
+			//IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
+			//{
+			//	Text = u.Name,
+			//	Value = u.CategoryId.ToString()
+			//});
+			//ViewData["CategoryList"] = categoryList;
+			//return View();
+		}
               
         public IActionResult Delete(Product product)
         {
