@@ -1,4 +1,5 @@
-﻿@model Product
+﻿@using ShoppingCart.ViewModels
+@model ProductVM
 
 <form method="post">
 	<div class="border p-3 mt-4">
@@ -8,35 +9,34 @@
 		<div asp-validation-summary="All"></div>
 		<div class="mb-3">
 			<label class="text-primary">Product Title</label>
-			<input asp-for="Title" type="text" class="form-control" />
-			<span asp-validation-for="Title" , class="text-danger"></span>
+			<input asp-for="Product.Title" type="text" class="form-control" />
+			<span asp-validation-for="Product.Title" , class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label class="text-primary">Description</label>
-			<input asp-for="Description" type="text" class="form-control" />
-			<span asp-validation-for="Description" , class="text-danger"></span>
+			<input asp-for="Product.Description" type="text" class="form-control" />
+			<span asp-validation-for="Product.Description" , class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label class="text-primary">ISBN</label>
-			<input asp-for="ISBN" type="text" class="form-control" />
-			<span asp-validation-for="ISBN" , class="text-danger"></span>
+			<input asp-for="Product.ISBN" type="text" class="form-control" />
+			<span asp-validation-for="Product.ISBN" , class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label class="text-primary">Author</label>
-			<input asp-for="Author" type="text" class="form-control" />
-			<span asp-validation-for="Author" , class="text-danger"></span>
+			<input asp-for="Product.Author" type="text" class="form-control" />
+			<span asp-validation-for="Product.Author" , class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label class="text-primary">List Price</label>
-			<input asp-for="ListPrice" type="text" class="form-control" />
-			<span asp-validation-for="ListPrice" , class="text-danger"></span>
+			<input asp-for="Product.ListPrice" type="text" class="form-control" />
+			<span asp-validation-for="Product.ListPrice" , class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label class="text-primary">Category List</label>
-			<select asp-for="CategoryId" asp-items = "@(ViewData["CategoryList"] as IEnumerable<SelectListItem>)" class="form-select" >
+			<select asp-for="Product.CategoryId" asp-items = "@Model.CategoryList" class="form-select" >
 				<option>--Select Category--</option>
 			</select>
-			<span asp-validation-for="ListPrice" , class="text-danger"></span>
 		</div>
 		<button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
 		<a asp-controller="Product" asp-action="Index"

@@ -44,7 +44,7 @@ namespace ShoppingCart.Controllers
                 Product = new Product(),
                 CategoryList = categoryList
             };
-            return View();
+            return View(productVM);
         }
 
         [HttpPost]
