@@ -12,10 +12,12 @@ namespace ShoppingCart.Controllers
     {
         private readonly IRepository<Product> _repo;
         private readonly IRepository<Category> _cateRepo;
-        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo, IWebHostEnvironment webHostEnvironment)
         {
             _repo = repo;
             _cateRepo = cateRepo;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [HttpGet]
@@ -56,36 +58,47 @@ namespace ShoppingCart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpsertProduct(Product product)
+        public IActionResult UpsertProduct(ProductVM productVm, IFormFile file)
         {
-            if (product.Title != null && product.Title.ToLower().Contains(ConstantValues.TestData.ToLower()))
+            if (productVm.Product.Title != null && productVm.Product.Title.ToLower().Contains(ConstantValues.TestData.ToLower()))
             {
                 ModelState.AddModelError("Title", "Test is not a valid input");
             }
 
-            if (string.IsNullOrWhiteSpace(product.Title))
+            if (string.IsNullOrWhiteSpace(productVm.Product.Title))
             {
                 ModelState.AddModelError("Title", "Title yet to be decided");
 
             }
-            if (string.IsNullOrWhiteSpace(product.Author))
+            if (string.IsNullOrWhiteSpace(productVm.Product.Author))
             {
                 ModelState.AddModelError("Author", "Author yet to be decided");
 
             }
-            if (string.IsNullOrWhiteSpace(product.ISBN))
+            if (string.IsNullOrWhiteSpace(productVm.Product.ISBN))
             {
                 ModelState.AddModelError("ISBN", "ISBN yet to be decided");
 
             }
-            if (!(product.ListPrice > 0))
+            if (!(productVm.Product.ListPrice > 0))
             {
                 ModelState.AddModelError("ListPrice", "ListPrice yet to be decided");
 
             }
             if (ModelState.IsValid)
             {
-                _repo.Insert(product);
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if(file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString()+ Path.GetExtension(file.FileName);
+                    string productPath = Path.Combine(wwwRootPath, @"images\products\");
+                    using(FileStream fs = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fs);
+                    }
+                    productVm.Product.ImageUrl = @"images\products\" + fileName;
+                }
+                _repo.Insert(productVm.Product);
                 return RedirectToAction("Index");
             }
             IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
@@ -94,21 +107,6 @@ namespace ShoppingCart.Controllers
                 Value = u.CategoryId.ToString()
             });
             ViewData["CategoryList"] = categoryList;
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Edit(Product product)
-        {
-            if (product.Title != null && product.Title.ToLower().Contains(ConstantValues.TestData.ToLower()))
-            {
-                ModelState.AddModelError("Title", "Test is not a valid input");
-            }
-            if (ModelState.IsValid)
-            {
-                _repo.Update(product);
-                return RedirectToAction("Index");
-            }
             return View();
         }
 
