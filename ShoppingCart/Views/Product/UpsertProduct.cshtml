@@ -41,7 +41,7 @@
 		</div>
 		<div class="mb-3">
 			<label class="text-primary">Upload Image</label>
-			<input asp-for="Product.ImageUrl" type="file" class="form-control" />
+			<input asp-for="Product.ImageUrl" name ="file" type="file" class="form-control" />
 		</div>
 		<button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
 		<a asp-controller="Product" asp-action="Index"
