@@ -9,13 +9,13 @@ namespace ShoppingCart.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateIndex(
-                name: "IX_Products_CategoryId",
-                table: "Products",
+                name: "IX_Product_CategoryId",
+                table: "Product",
                 column: "CategoryId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Products_Category_CategoryId",
-                table: "Products",
+                name: "FK_Product_Category_CategoryId",
+                table: "Product",
                 column: "CategoryId",
                 principalTable: "Category",
                 principalColumn: "CategoryId",
@@ -25,12 +25,12 @@ namespace ShoppingCart.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Products_Category_CategoryId",
-                table: "Products");
+                name: "FK_Product_Category_CategoryId",
+                table: "Product");
 
             migrationBuilder.DropIndex(
-                name: "IX_Products_CategoryId",
-                table: "Products");
+                name: "IX_Product_CategoryId",
+                table: "Product");
         }
     }
 }

@@ -1,30 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NToastNotify;
 using ShoppingCart.Data;
-using System.Linq.Expressions;
+using ShoppingCart.Models;
 
 namespace ShoppingCart.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
+
     {
         private readonly ShoppingCartContext _context;
         private DbSet<T> dbSet;
 
-        public Repository(ShoppingCartContext context)
+
+        
+        public Repository(ShoppingCartContext context, IToastNotification toastNotification)
         {
             _context = context;
             this.dbSet = _context.Set<T>();
-        }
-        public void Delete(T entity)
-        {
-            dbSet.Remove(entity);
-            _context.SaveChanges();
-        }
-
-        public T Get(Expression<Func<T, bool>> filter)
-        {
-            IQueryable<T> query = dbSet;
-            query.Where(filter);
-            return query.FirstOrDefault();
         }
 
         public IEnumerable<T> GetAll()
@@ -44,9 +36,15 @@ namespace ShoppingCart.Repository
             _context.SaveChanges();
         }
 
-        public void RemoveRange(IEnumerable<T> entity)
+        public void Remove(T entity)
         {
-            dbSet.RemoveRange(entity);
+            _context.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public void Save()
+        {
+            _context.SaveChanges();
         }
 
         public void Update(T entity)

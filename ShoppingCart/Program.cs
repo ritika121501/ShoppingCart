@@ -5,20 +5,26 @@ using ShoppingCart.Models;
 using ShoppingCart.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ShoppingCartContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
+//Add Toast notification services
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
-
-//Add Toast notification service
 builder.Services.AddRazorPages().AddNToastNotifyNoty(new NotyOptions
 {
     ProgressBar = true,
-    Timeout = 2000
+    Timeout = 5000,
+    Theme = "mint"
 });
+
+
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ShoppingCartContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApi1Context") ?? throw new InvalidOperationException("Connection string 'CRUDApi1Context' not found.")));
+//builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+//builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+
 
 
 var app = builder.Build();
@@ -35,7 +41,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapControllerRoute(

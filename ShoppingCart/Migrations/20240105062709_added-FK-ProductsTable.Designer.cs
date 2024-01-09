@@ -11,14 +11,14 @@ using ShoppingCart.Data;
 namespace ShoppingCart.Migrations
 {
     [DbContext(typeof(ShoppingCartContext))]
-    [Migration("20231206010354_productMigration")]
-    partial class productMigration
+    [Migration("20240105062709_added-FK-ProductsTable")]
+    partial class addedFKProductsTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.23")
+                .HasAnnotation("ProductVersion", "6.0.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -46,7 +46,7 @@ namespace ShoppingCart.Migrations
                     b.HasData(
                         new
                         {
-                            CategoryId = 1,
+                            CategoryId = 3,
                             DisplayOrder = 1,
                             Name = "Comedy"
                         },
@@ -58,7 +58,7 @@ namespace ShoppingCart.Migrations
                         },
                         new
                         {
-                            CategoryId = 3,
+                            CategoryId = 1,
                             DisplayOrder = 3,
                             Name = "Fiction"
                         });
@@ -76,6 +76,9 @@ namespace ShoppingCart.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -84,8 +87,8 @@ namespace ShoppingCart.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("ListPrice")
-                        .HasColumnType("float");
+                    b.Property<int>("ListPrice")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -93,36 +96,52 @@ namespace ShoppingCart.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Product");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Author = "Harper Lee",
-                            Description = "believed to be one of the most influential authors to have ever existed, famously published only a single novel",
-                            ISBN = "SWV0001",
-                            ListPrice = 99.0,
-                            Title = "To Kill a Mockingbird"
+                            Author = "Louisa May Alcott",
+                            CategoryId = 0,
+                            Description = "Generations of readers young and old, male and female, have fallen in love with the March sisters of Louisa May Alcott’s most popular and enduring novel, Little Women",
+                            ISBN = "SW001",
+                            ListPrice = 99,
+                            Title = "Little Women"
                         },
                         new
                         {
                             Id = 2,
-                            Author = "Nick Carraway",
-                            Description = "is distinguished as one of the greatest texts for introducing students to the art of reading literature critically ",
-                            ISBN = "SWV00078",
-                            ListPrice = 100.0,
-                            Title = "The Great Gatsby"
+                            Author = "Karina Halle",
+                            CategoryId = 0,
+                            Description = "After the death of her best friend and writing partner, Grace Harper is struggling both with grief, and with her next novel, the first one she’ll have to write alone",
+                            ISBN = "SW002",
+                            ListPrice = 89,
+                            Title = "One Hot Italian Summer"
                         },
                         new
                         {
                             Id = 3,
-                            Author = "Gabriel García Márquez",
-                            Description = "The novel tells the story of seven generations of the Buendía family and follows the establishment of their town",
-                            ISBN = "SWV0002",
-                            ListPrice = 101.0,
-                            Title = "One Hundred Years of Solitude"
+                            Author = "Diane Setterfield",
+                            CategoryId = 0,
+                            Description = "Reclusive author Vida Winter, famous for her collection of twelve enchanting stories, has spent the past six decades penning a series of alternate lives for herself. ",
+                            ISBN = "SW003",
+                            ListPrice = 109,
+                            Title = "The Thirteenth Tale"
                         });
+                });
+
+            modelBuilder.Entity("ShoppingCart.Models.Product", b =>
+                {
+                    b.HasOne("ShoppingCart.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

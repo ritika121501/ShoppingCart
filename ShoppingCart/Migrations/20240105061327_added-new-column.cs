@@ -10,7 +10,7 @@ namespace ShoppingCart.Migrations
         {
             migrationBuilder.AddColumn<int>(
                 name: "CategoryId",
-                table: "Products",
+                table: "Product",
                 type: "int",
                 nullable: false,
                 defaultValue: 0);
@@ -20,7 +20,7 @@ namespace ShoppingCart.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "CategoryId",
-                table: "Products");
+                table: "Product");
         }
     }
 }
