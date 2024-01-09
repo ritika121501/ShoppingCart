@@ -24,13 +24,30 @@ namespace ShoppingCart.Controllers
             return View(data);
         }
         [HttpGet]
-        public IActionResult CreateCategory()
+        public IActionResult UpsertCategory(int? id)
         {
-            return View();
+            if (id == null || id == 0)
+            {
+                return View();
+            }
+            
+            
+			
+				var category = _repo.GetById(id.Value);
+				if (category == null)
+				{
+					return NotFound();
+				}
+				//lambda expression
+				//var category1 = _context.Category.FirstOrDefault(x => x.CategoryId == id); 
+				//Exmaples of Linq
+				//var category2 = _context.Category.Where(category => category.Name.Contains("Comedy")).ToList();
+				return View(category);
+			
         }
 
         [HttpPost]
-        public IActionResult CreateCategory(Category category)
+        public IActionResult UpsertCategory(Category category)
         {
             if (category.Name != null && category.Name.ToLower().Contains(ConstantValues.TestData.ToLower()))
             {
@@ -38,12 +55,18 @@ namespace ShoppingCart.Controllers
             }
             if (ModelState.IsValid)
             {
-                _repo.Insert(category);
-                _toastNotification.AddSuccessToastMessage("Category Added Successfully");
+
+
+                _repo.Update(category);
+                _toastNotification.AddSuccessToastMessage("Category Updated Successfully");
                 return RedirectToAction("Index");
             }
-            return View();
-        }
+            
+                _repo.Insert(category);
+                _toastNotification.AddSuccessToastMessage("Category Added Successfully");
+				return RedirectToAction("Index");
+			
+		}
 
         [HttpGet]
         public IActionResult Edit(int id)
