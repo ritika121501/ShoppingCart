@@ -31,7 +31,7 @@ namespace ShoppingCart.Controllers
         {
             if (id == null || id == 0)
             {
-                return NotFound();
+                return View();
             }
             else
             {
@@ -49,20 +49,38 @@ namespace ShoppingCart.Controllers
 		[HttpPost]
 			public IActionResult UpsertCategory(Category category)
         {
-            if (category.Name != null && category.Name.ToLower().Contains(ConstantValues.TestData.ToLower()))
-            {
-                ModelState.AddModelError("Name", "Test is not a valid input");
-            }
-            if (ModelState.IsValid)
-            {
-                _repo.Insert(category);
-                _toastNotification.AddSuccessToastMessage("Category Added Successfully");
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
+            
 
-      
+                if (category.Name != null && category.Name.ToLower().Contains(ConstantValues.TestData.ToLower()))
+                {
+                    ModelState.AddModelError("Name", "Test is not a valid input");
+
+                }
+
+            if (category.CategoryId == null || category.CategoryId == 0)
+            {
+
+                if (ModelState.IsValid)
+                {
+                    _repo.Insert(category);
+                    _toastNotification.AddSuccessToastMessage("Category Added Successfully");
+                    return RedirectToAction("Index");
+                }
+            }
+            else
+            {
+
+                if (ModelState.IsValid)
+                {
+                    _repo.Update(category);
+                    _toastNotification.AddSuccessToastMessage("Category Updated Successfully");
+                    return RedirectToAction("Index");
+                }
+            } 
+				return View();
+			}
+
+           
         public IActionResult Delete(Category category)
         { 
             _repo.Delete(category);
