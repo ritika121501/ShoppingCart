@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NToastNotify;
 using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
@@ -13,11 +14,13 @@ namespace ShoppingCart.Controllers
         private readonly IRepository<Product> _repo;
         private readonly IRepository<Category> _cateRepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo, IWebHostEnvironment webHostEnvironment)
+		private readonly IToastNotification _toastNotification;
+		public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo, IWebHostEnvironment webHostEnvironment, IToastNotification toastNotification)
         {
             _repo = repo;
             _cateRepo = cateRepo;
             _webHostEnvironment = webHostEnvironment;
+			_toastNotification = toastNotification;
         }
 
         [HttpGet]
@@ -84,36 +87,47 @@ namespace ShoppingCart.Controllers
             {
                 ModelState.AddModelError("ListPrice", "ListPrice yet to be decided");
 
-            }
-            if (ModelState.IsValid)
-            {
+            } 
                 string wwwRootPath = _webHostEnvironment.WebRootPath;
-                if(file != null)
-                {
-                    string fileName = Guid.NewGuid().ToString()+ Path.GetExtension(file.FileName);
-                    string productPath = Path.Combine(wwwRootPath, @"images\products\");
-                    using(FileStream fs = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
-                    {
-                        file.CopyTo(fs);
+                if (file != null)
+                  {
+                     string fileName = Guid.NewGuid().ToString()+ Path.GetExtension(file.FileName);
+                     string productPath = Path.Combine(wwwRootPath, @"images\products\");
+                     using(FileStream fs = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                        {
+                            file.CopyTo(fs);
+                        }
+                        productVm.Product.ImageUrl = @"images\products\" + fileName;
                     }
-                    productVm.Product.ImageUrl = @"images\products\" + fileName;
-                }
-                _repo.Insert(productVm.Product);
-                return RedirectToAction("Index");
-            }
-            IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
-            {
-                Text = u.Name,
-                Value = u.CategoryId.ToString()
-            });
-            ViewData["CategoryList"] = categoryList;
-            return View();
+
+                 if (productVm.Product.Id == 0)
+                    {            
+				        _repo.Insert(productVm.Product);
+				        _toastNotification.AddSuccessToastMessage("Product Added Successfully");
+					    return RedirectToAction("Index");
+                    }
+                else
+                    {                                  					
+					    _repo.Update(productVm.Product);
+				        _toastNotification.AddSuccessToastMessage("Product Updated Successfully");
+                        return RedirectToAction("Index");
+                    }
+            
+                //view Data code
+                //IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
+                //{
+                //    Text = u.Name,
+                //    Value = u.CategoryId.ToString()
+                //});
+                //ViewData["CategoryList"] = categoryList;
+                //return View();
         }
 
         public IActionResult Delete(Product product)
         {
             _repo.Delete(product);
-            return RedirectToAction("Index");
+			_toastNotification.AddSuccessToastMessage("Product Deleted Successfully");
+			return RedirectToAction("Index");
         }
     }
 }
