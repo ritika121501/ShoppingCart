@@ -24,26 +24,57 @@ namespace ShoppingCart.Controllers
             return View(data);
         }
         [HttpGet]
-        public IActionResult CreateCategory()
+        public IActionResult UpsertCategory(int? id)
         {
-            return View();
+            Category category = new Category();
+            if (id == null || id == 0)
+            {
+                return View(category);
+            }
+            else
+            {
+                 category = _repo.GetById(id.Value);
+
+				if (category == null)
+                {
+                    return NotFound();
+                }
+                //lambda expression
+                //var category1 = _context.Category.FirstOrDefault(x => x.CategoryId == id); 
+                //Exmaples of Linq
+                //var category2 = _context.Category.Where(category => category.Name.Contains("Comedy")).ToList();
+                return View(category);
+            }
+			
         }
 
         [HttpPost]
-        public IActionResult CreateCategory(Category category)
+        public IActionResult UpsertCategory(Category category)
         {
             if (category.Name != null && category.Name.ToLower().Contains(ConstantValues.TestData.ToLower()))
             {
                 ModelState.AddModelError("Name", "Test is not a valid input");
+                
             }
-            if (ModelState.IsValid)
+			if (ModelState.IsValid)
             {
-                _repo.Insert(category);
-                _toastNotification.AddSuccessToastMessage("Category Added Successfully");
-                return RedirectToAction("Index");
+
+                if (category.CategoryId == null || category.CategoryId == 0)
+                {
+                    _repo.Insert(category);
+                    _toastNotification.AddSuccessToastMessage("Category Added Successfully");
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    _repo.Update(category);
+                    _toastNotification.AddSuccessToastMessage("Category Updated Successfully");
+                    return RedirectToAction("Index");
+                }
             }
             return View();
-        }
+			
+		}
 
         [HttpGet]
         public IActionResult Edit(int id)

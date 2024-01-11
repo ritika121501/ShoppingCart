@@ -5,7 +5,7 @@
 			<h2>Category List</h2>
 		</div>
 		<div class="col-6 text-end">
-			<a asp-controller="Category" asp-action="CreateCategory"
+			<a asp-controller="Category" asp-action="UpsertCategory"
 			   class="btn btn-primary">
 				<i class="bi bi-plus-circle-fill"></i>Create New Category
 			</a>
@@ -29,7 +29,7 @@
 				<td>@item.DisplayOrder</td>
 				<td>
 					<div class="m-75 btn-group">
-						<a asp-controller="Category" asp-action="Edit" asp-route-id = "@item.CategoryId"
+						<a asp-controller="Category" asp-action="UpsertCategory" asp-route-id = "@item.CategoryId"
 					   class="btn btn-primary mx-2">
 							<i class="bi bi-pencil-square"></i>Edit
 						</a>
