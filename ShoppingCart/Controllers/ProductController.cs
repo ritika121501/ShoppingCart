@@ -23,7 +23,7 @@ namespace ShoppingCart.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var data = _repo.GetAll();
+            var data = _repo.GetAll(includeProperties:"Category");
             return View(data);
         }
         [HttpGet]
@@ -115,5 +115,14 @@ namespace ShoppingCart.Controllers
             _repo.Delete(product);
             return RedirectToAction("Index");
         }
+
+        #region API Calls
+        [HttpGet]
+        public IActionResult GetAllProducts()
+        {
+            var productList = _repo.GetAll(includeProperties: "Category");
+            return Json(new { data = productList });
+        }
+        #endregion
     }
 }
