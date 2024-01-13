@@ -1,60 +1,74 @@
 ﻿@using ShoppingCart.ViewModels
 @model ProductVM
 
+<script src="https://cdn.tiny.cloud/1/3emb9ak29w9edxe3fsqrf5kd5c1y7gvbnwewvwhxzmjwum5w/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'mentions anchor autolink charmap codesample emoticons image link lists insertdatetime media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+
+        toolbar: 'undo redo blocks fontfamily fontsize bold italic underline strikethrough | forecolor backcolor | align | lineheight ' +
+            'emoticons charmap removeformat | checklist numlist bullist indent outdent | link image media table mergetags'
+    });
+</script>
+
 <form method="post" enctype="multipart/form-data">
-	<input hidden asp-for="Product.Id" />
-	<div class = "row">
-		<div class="col-10">
-			<div class="border p-3 mt-4">
-		<div class="row pb-2">
-			<h2 class="text-primary">Create Product</h2>
-		</div>
-		<div asp-validation-summary="All"></div>
-		<div class="mb-3">
-			<label class="text-primary">Product Title</label>
-			<input asp-for="Product.Title" type="text" class="form-control" />
-			<span asp-validation-for="Product.Title" , class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label class="text-primary">Description</label>
-			<input asp-for="Product.Description" type="text" class="form-control" />
-			<span asp-validation-for="Product.Description" , class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label class="text-primary">ISBN</label>
-			<input asp-for="Product.ISBN" type="text" class="form-control" />
-			<span asp-validation-for="Product.ISBN" , class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label class="text-primary">Author</label>
-			<input asp-for="Product.Author" type="text" class="form-control" />
-			<span asp-validation-for="Product.Author" , class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label class="text-primary">List Price</label>
-			<input asp-for="Product.ListPrice" type="text" class="form-control" />
-			<span asp-validation-for="Product.ListPrice" , class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label class="text-primary">Category List</label>
-			<select asp-for="Product.CategoryId" asp-items = "@Model.CategoryList" class="form-select" >
-				<option>--Select Category--</option>
-			</select>
-		</div>
-		<div class="mb-3">
-			<label class="text-primary">Upload Image</label>
-			<input asp-for="Product.ImageUrl" name ="file" type="file" class="form-control" />
-		</div>
-		<button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
-		<a asp-controller="Product" asp-action="Index"
-		   class="btn btn-warning">Back To List</a>
-	</div>
-		</div>
-	</div>
-	<div class ="row">
-		<div class = "col-2">
-			<img src="@Model.Product.ImageUrl" width = "100%"/>
-		</div>
-	</div>
-	
+    <input hidden asp-for="Product.Id" />
+    <div class="row">
+        <div class="col-10">
+            <div class="border p-3 mt-4">
+                <div class="row pb-2">
+                    <h2 class="text-primary">Create Product</h2>
+                </div>
+                <div asp-validation-summary="All"></div>
+                <div class="mb-3">
+                    <label class="text-primary">Product Title</label>
+                    <input asp-for="Product.Title" type="text" class="form-control" />
+                    <span asp-validation-for="Product.Title" , class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="text-primary">Description</label>
+                    @* <input asp-for="Product.Description" type="text" class="form-control" /> *@
+                    <textarea id="tinyTextarea1" asp-for="Product.Description"></textarea>
+                    <span asp-validation-for="Product.Description" , class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="text-primary">ISBN</label>
+                    <input asp-for="Product.ISBN" type="text" class="form-control" />
+                    <span asp-validation-for="Product.ISBN" , class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="text-primary">Author</label>
+                    <input asp-for="Product.Author" type="text" class="form-control" />
+                    <span asp-validation-for="Product.Author" , class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="text-primary">List Price</label>
+                    <input asp-for="Product.ListPrice" type="text" class="form-control" />
+                    <span asp-validation-for="Product.ListPrice" , class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="text-primary">Category List</label>
+                    <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-select">
+                        <option>--Select Category--</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="text-primary">Upload Image</label>
+                    <input asp-for="Product.ImageUrl" name="file" type="file" class="form-control" />
+                </div>
+               
+                <button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
+                <a asp-controller="Product" asp-action="Index"
+                   class="btn btn-warning">Back To List</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <img src="@Model.Product.ImageUrl" width="100%" />
+        </div>
+    </div>
+
 </form>
