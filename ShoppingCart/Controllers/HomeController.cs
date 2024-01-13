@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShoppingCart.Models;
+using ShoppingCart.Repository;
 using System.Diagnostics;
 
 namespace ShoppingCart.Controllers
@@ -7,15 +8,17 @@ namespace ShoppingCart.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IRepository<Product> _repo;
+        public HomeController(ILogger<HomeController> logger, IRepository<Product> repo)
         {
             _logger = logger;
+            _repo = repo;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> products = _repo.GetAll(includeProperties: "Category");
+            return View(products);
         }
 
         public IActionResult Privacy()
