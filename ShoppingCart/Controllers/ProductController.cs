@@ -25,15 +25,15 @@ namespace ShoppingCart.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var data = _repo.GetAll(includeProperties:"Category");
+            var data = _repo.GetAll(includeProperties: "Category");
             return View(data);
         }
         [HttpGet]
         public IActionResult UpsertProduct(int? id)
         {
             //SelectListItem
-            IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u=> new SelectListItem
-            { 
+            IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
+            {
                 Text = u.Name,
                 Value = u.CategoryId.ToString()
             });
@@ -48,7 +48,7 @@ namespace ShoppingCart.Controllers
                 Product = new Product(),
                 CategoryList = categoryList
             };
-            if(id==null || id == 0)
+            if (id == null || id == 0)
             {
                 return View(productVM);
             }
@@ -90,11 +90,11 @@ namespace ShoppingCart.Controllers
             if (ModelState.IsValid)
             {
                 string wwwRootPath = _webHostEnvironment.WebRootPath;
-                if(file != null)
+                if (file != null)
                 {
-                    string fileName = Guid.NewGuid().ToString()+ Path.GetExtension(file.FileName);
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string productPath = Path.Combine(wwwRootPath, @"images\products\");
-                    using(FileStream fs = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    using (FileStream fs = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
                     {
                         file.CopyTo(fs);
                     }
@@ -128,8 +128,8 @@ namespace ShoppingCart.Controllers
             }
             _repo.Delete(product);
             return RedirectToAction("Index");
-		}
-            
+        }
+
         #region API Calls
         [HttpGet]
         public IActionResult GetAllProducts()
