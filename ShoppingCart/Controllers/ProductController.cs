@@ -5,6 +5,8 @@ using ShoppingCart.Models;
 using ShoppingCart.Repository;
 using ShoppingCart.Utility;
 using ShoppingCart.ViewModels;
+using System.Diagnostics;
+using System.IO;
 
 namespace ShoppingCart.Controllers
 {
@@ -110,12 +112,24 @@ namespace ShoppingCart.Controllers
             return View();
         }
 
-        public IActionResult Delete(Product product)
+		[HttpGet]
+		public IActionResult Delete(int Id)
         {
+		    Product product=new Product();
+            product = _repo.GetById(Id);
+			
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+		    string filepath;
+
+            if (product.ImageUrl != null)
+            {
+                filepath = Path.Combine(wwwRootPath, product.ImageUrl);
+                System.IO.File.Delete(filepath);    
+            }
             _repo.Delete(product);
             return RedirectToAction("Index");
-        }
-
+		}
+            
         #region API Calls
         [HttpGet]
         public IActionResult GetAllProducts()
