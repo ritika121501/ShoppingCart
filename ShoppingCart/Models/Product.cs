@@ -19,7 +19,7 @@ namespace ShoppingCart.Models
         [Required]
         [Display(Name = "List Price")]
         [Range(1, 1000)]
-        public int ListPrice { get; set; }
+        public double ListPrice { get; set; }
 
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
