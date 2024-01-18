@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj": {}
+    "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj": {
+    "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj",
+        "projectUniqueName": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj",
         "projectName": "ShoppingCart.Models",
-        "projectPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj",
-        "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart.Models\\obj\\",
+        "projectPath": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart.Models\\ShoppingCart.Models.csproj",
+        "packagesPath": "C:\\Users\\HARI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HARI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {}
+    "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {
+    "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
-        "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Ritika_Solution\\ShoppingCart\\ShoppingCart\\obj\\",
+        "projectPath": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
+        "packagesPath": "C:\\Users\\HARI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HARI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
