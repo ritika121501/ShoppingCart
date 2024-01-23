@@ -15,6 +15,7 @@
 
 <form method="post" enctype="multipart/form-data">
     <input hidden asp-for="Product.Id" />
+    <input hidden asp-for="Product.ImageUrl" />
     <div class="row">
         <div class="col-10">
             <div class="border p-3 mt-4">
@@ -58,10 +59,12 @@
                     <label class="text-primary">Upload Image</label>
                     <input asp-for="Product.ImageUrl" name="file" type="file" class="form-control" />
                 </div>
-               
+
                 <button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
                 <a asp-controller="Product" asp-action="Index"
                    class="btn btn-warning">Back To List</a>
+
+
             </div>
         </div>
     </div>
