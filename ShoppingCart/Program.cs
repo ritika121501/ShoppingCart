@@ -4,6 +4,8 @@ using ShoppingCart.Data;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using ShoppingCart.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +15,11 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ShoppingCartContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ShoppingCartContext>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ShoppingCartContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 //Add Toast notification service
 builder.Services.AddRazorPages().AddNToastNotifyNoty(new NotyOptions
