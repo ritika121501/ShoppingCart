@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ShoppingCart
 build_property.RootNamespace = ShoppingCart
-build_property.ProjectDir = C:\Users\kumar\Desktop\DotNet\Ritika_Solution\ShoppingCart\ShoppingCart\
+build_property.ProjectDir = C:\Users\HARI\Desktop\Repo\ShoppingCart\ShoppingCart\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\kumar\Desktop\DotNet\Ritika_Solution\ShoppingCart\ShoppingCart
+build_property.MSBuildProjectDirectory = C:\Users\HARI\Desktop\Repo\ShoppingCart\ShoppingCart
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Category/CreateCategory.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Category/CreateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Category/Edit.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Category/Index.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Home/Index.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Category/UpsertCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBzZXJ0Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Home/Privacy.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Product/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Product/Index.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Product/UpsertProduct.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Product/UpsertProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcHNlcnRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Shared/Error.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/_ViewImports.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/_ViewStart.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/Desktop/DotNet/Ritika_Solution/ShoppingCart/ShoppingCart/Views/Shared/_Layout.cshtml]
+[C:/Users/HARI/Desktop/Repo/ShoppingCart/ShoppingCart/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ce7yr55nmi
