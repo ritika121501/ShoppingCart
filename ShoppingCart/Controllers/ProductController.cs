@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ShoppingCart.Data;
+using NToastNotify;
 using ShoppingCart.Models;
 using ShoppingCart.Repository;
 using ShoppingCart.Utility;
@@ -15,11 +16,16 @@ namespace ShoppingCart.Controllers
         private readonly IRepository<Product> _repo;
         private readonly IRepository<Category> _cateRepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo, IWebHostEnvironment webHostEnvironment)
+        private readonly IToastNotification _toastNotification;
+
+        public ProductController(IRepository<Product> repo, IRepository<Category> cateRepo, IWebHostEnvironment webHostEnvironment,
+            IToastNotification toastNotification)
         {
             _repo = repo;
             _cateRepo = cateRepo;
             _webHostEnvironment = webHostEnvironment;
+            _toastNotification = toastNotification;
+
         }
 
         [HttpGet]
@@ -31,18 +37,12 @@ namespace ShoppingCart.Controllers
         [HttpGet]
         public IActionResult UpsertProduct(int? id)
         {
-            //SelectListItem
             IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
             {
                 Text = u.Name,
                 Value = u.CategoryId.ToString()
             });
-            //ViewBag it is dynamic type
-            //ViewBag.CategoryList = categoryList;
-
-            //ViewData is a type datadictionary
-            //With both viewbag and viewdata after it is read for the first time the data will not populate again
-            //ViewData["CategoryList"] = categoryList;
+            
             ProductVM productVM = new ProductVM()
             {
                 Product = new Product(),
@@ -93,16 +93,28 @@ namespace ShoppingCart.Controllers
                 if (file != null)
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    string productPath = Path.Combine(wwwRootPath, @"images\products\");
+                    string productPath = Path.Combine(wwwRootPath, @"images/products/");
                     using (FileStream fs = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
                     {
                         file.CopyTo(fs);
                     }
-                    productVm.Product.ImageUrl = @"images\products\" + fileName;
+                    productVm.Product.ImageUrl = @"images/products/" + fileName;
                 }
-                _repo.Insert(productVm.Product);
-                return RedirectToAction("Index");
+                if (productVm.Product.Id == 0)
+                {
+                    _repo.Insert(productVm.Product);
+                    _toastNotification.AddSuccessToastMessage("Product Added Successfully");
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    _repo.Update(productVm.Product);
+                    _toastNotification.AddSuccessToastMessage("Product Updated Successfully");
+                    return RedirectToAction("Index");
+                }
+              
             }
+
             IEnumerable<SelectListItem> categoryList = _cateRepo.GetAll().Select(u => new SelectListItem
             {
                 Text = u.Name,
@@ -127,6 +139,7 @@ namespace ShoppingCart.Controllers
                 System.IO.File.Delete(filepath);    
             }
             _repo.Delete(product);
+            _toastNotification.AddSuccessToastMessage("Product Deleted Successfully");
             return RedirectToAction("Index");
         }
 
