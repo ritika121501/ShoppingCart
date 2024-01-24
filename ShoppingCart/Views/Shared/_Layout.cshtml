@@ -32,10 +32,11 @@
 						@if (User.IsInRole(RolesConstant.Role_Admin))
 						{
 									 <li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
+									<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white">Content Management</a>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" asp-controller="Category" asp-action="Index">Category</a>
 										<a class="dropdown-item" asp-controller="Product" asp-action="Index">Product</a>
+										<a class="dropdown-item" asp-controller="Company" asp-action="Index">Company</a>
 									</div>
 								</li>
 						}

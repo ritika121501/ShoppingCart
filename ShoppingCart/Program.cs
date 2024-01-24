@@ -13,12 +13,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ShoppingCartContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApi1Context") ?? throw new InvalidOperationException("Connection string 'CRUDApi1Context' not found.")));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ShoppingCartContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+builder.Services.AddScoped<IRepository<Company>, Repository<Company>>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 //Add Toast notification service

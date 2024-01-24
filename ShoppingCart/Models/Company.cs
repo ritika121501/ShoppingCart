@@ -23,7 +23,8 @@ namespace ShoppingCart.Models
         public string City { get; set; }
         public string State { get; set; }
         public string Postal { get; set; }
-        [MaxLength(10)]
-        public long PhoneNumber { get; set; }
+       
+		//[MaxLength(10, ErrorMessage = "Length should not be greater than 10")]
+		public long PhoneNumber { get; set; }
     }
 }
