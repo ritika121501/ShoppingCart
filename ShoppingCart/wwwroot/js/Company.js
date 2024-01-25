@@ -17,17 +17,16 @@
                 "render": function (data) {
                     return `<div>
                         <div class="m-75 btn-group">
-<a href="/Company/UpsertCompany/${data}"
-  class="btn btn-primary mx-2">
-<i class="bi bi-pencil-square"></i>Edit
-</a>
+                        <a href="/Company/UpsertCompany/${data}"
+                         class="btn btn-primary mx-2">
+                        <i class="bi bi-pencil-square"></i>Edit
+                        </a>
 
-                      <a href="/company/Delete/${data}" onclick="return myFunction();"
-
-  class="btn btn-danger mx-2">
-<i class="bi bi-trash-fill"></i>Delete
-</a>
-</div>
+                      <a href="/company/Delete/${data}" onclick="return myFunction() ;"
+                      class="btn btn-danger mx-2">
+                    <i class="bi bi-trash-fill"></i>Delete
+                    </a>
+                    </div>
                             </div>
                             <script>
                           function myFunction() {
@@ -55,7 +54,7 @@
                 $.ajax({
                         url: '/company/Delete/${data}',
                         type: 'GET',
-                        data: { id: ${data} },
+                        data: { ${data} },
                         success: function () {
                             // Remove the row from DataTable on success
                             //row.remove().draw();
