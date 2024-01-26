@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ShoppingCartContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApi1Context") ?? throw new InvalidOperationException("Connection string 'CRUDApi1Context' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDApiContext") ?? throw new InvalidOperationException("Connection string 'CRUDApiContext' not found.")));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ShoppingCartContext>().AddDefaultTokenProviders();
