@@ -10,7 +10,24 @@ namespace ShoppingCart.Models
         //views for all operations
         //Datables for showing all company together,  buttons for edit and delete/ Create new Company
 
-        //Silpa/Devanshi/Neethu/Sudha
+        //Silpa/Mani/Neethu/Sudha
+
+        //Register Page - rajee, Srivalli , Anitha, Chinduja
+        //Add all missing fields
+        //City, State , Country amke it drop down
+        //City - Id, Name - Create Table
+        //State - Id Name - Crete Table
+        //SelectList Item and fetch it
+
+        //Swarna , Raj Priya, Azim, Keerthi
+
+        // A cart Option on main menu strip
+        //On Clcik of the cart - open a new page
+        // That page shoule hasve few DEatils like 
+        //Product Id 
+        //Invoice Controller
+        //Invoice Table - Application Udser id, Id(PK), TotalPrice
+
         
         [Key]
         public int CompanyId { get; set; }
