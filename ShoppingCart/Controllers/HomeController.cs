@@ -23,8 +23,9 @@ namespace ShoppingCart.Controllers
 
         public IActionResult Details(int productId)
         {
-            Product product = _repo.Get(u=>u.Id==productId);
-            return View(product);
+			// Product product = _repo.Get(u=>u.Id==productId);
+			Product product = _repo.GetById(productId);
+			return View(product);
         }
 
         public IActionResult Privacy()
