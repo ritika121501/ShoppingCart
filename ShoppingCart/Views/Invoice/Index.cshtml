@@ -1,0 +1,44 @@
+﻿@model List<Invoice>
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<h2>Invoice Summary</h2>
+		</div>
+		<div class="col-6 text-end">
+			<a asp-controller="Invoice" asp-action="GetInvoice">
+				
+			</a>
+		</div>
+	</div>
+
+</div>
+<table id="myTable" class="table table-bordered table-striped" style="width:100%">
+	<thead>
+		<tr>
+			<th>ProductId</th>
+
+			<th>TotalPrice</th>
+			<th>ApplicationUserId</th>
+			
+			<th></th>
+	<tbody>
+				@foreach (var item in Model)
+				{
+			<tr>
+				<td>@item.ProductId</td>
+				<td>@item.TotalPrice</td>
+				<td>@item.ApplicationUserId</td>
+				
+			</tr>
+				}
+
+	</tbody>
+		</tr>
+	</thead>
+
+</table>
+
+
+@* @section Scripts{
+	<script src="~/js/Company.js" asp-append-version="true"></script>
+ }*@
