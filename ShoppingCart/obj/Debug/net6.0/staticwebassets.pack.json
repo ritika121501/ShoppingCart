@@ -1,291 +1,295 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\HARI\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
+      "Id": "C:\\Users\\kumar\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
       "PackagePath": "staticwebassets\\noty.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
+      "Id": "C:\\Users\\kumar\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
       "PackagePath": "staticwebassets\\toastr.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ShoppingCart.bundle.scp.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ShoppingCart.bundle.scp.css",
       "PackagePath": "staticwebassets\\ShoppingCart.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\19348850928_ebc31137b3_b.jpg",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\19348850928_ebc31137b3_b.jpg",
       "PackagePath": "staticwebassets\\images\\products\\19348850928_ebc31137b3_b.jpg"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\2784375.png",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\2784375.png",
       "PackagePath": "staticwebassets\\images\\products\\2784375.png"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\3b2ac1c7-bcae-4759-b055-7486538386b2.png",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\3b2ac1c7-bcae-4759-b055-7486538386b2.png",
       "PackagePath": "staticwebassets\\images\\products\\3b2ac1c7-bcae-4759-b055-7486538386b2.png"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\5fe01f86-121e-4249-b638-a1ccecc86db9.png",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\5fe01f86-121e-4249-b638-a1ccecc86db9.png",
       "PackagePath": "staticwebassets\\images\\products\\5fe01f86-121e-4249-b638-a1ccecc86db9.png"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\949f11a3-e46a-403a-bf25-df032654f73e.png",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\949f11a3-e46a-403a-bf25-df032654f73e.png",
       "PackagePath": "staticwebassets\\images\\products\\949f11a3-e46a-403a-bf25-df032654f73e.png"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\OIP (1).jpg",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\images\\products\\OIP (1).jpg"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\OIP.jpg",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\OIP.jpg",
       "PackagePath": "staticwebassets\\images\\products\\OIP.jpg"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\images\\products\\landscape-nature-sky-325807.jpg",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\images\\products\\landscape-nature-sky-325807.jpg",
       "PackagePath": "staticwebassets\\images\\products\\landscape-nature-sky-325807.jpg"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\js\\product.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\js\\Company.js",
+      "PackagePath": "staticwebassets\\js\\Company.js"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

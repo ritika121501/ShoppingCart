@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {}
+    "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\ShoppingCart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {
+    "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
-        "packagesPath": "C:\\Users\\HARI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HARI\\Desktop\\Repo\\ShoppingCart\\ShoppingCart\\obj\\",
+        "projectPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\ShoppingCart.csproj",
+        "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kumar\\Desktop\\DotNet\\Solution\\ShoppingCart_K_Git\\ShoppingCart\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HARI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.23, )"
@@ -54,9 +62,17 @@
               "target": "Package",
               "version": "[6.0.23, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
             "NToastNotify": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -78,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
