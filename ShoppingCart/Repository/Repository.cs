@@ -23,6 +23,7 @@ namespace ShoppingCart.Repository
         public T Get(Expression<Func<T, bool>> filter)
         {
             IQueryable<T> query = dbSet;
+
             query.Where(filter);
             return query.FirstOrDefault();
         }
@@ -30,9 +31,24 @@ namespace ShoppingCart.Repository
         public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
-            if(!string.IsNullOrEmpty(includeProperties))
+            
+            if (!string.IsNullOrEmpty(includeProperties))
             {
                 foreach(var prop in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(prop);
+                }
+            }
+            return query.ToList();
+        }
+
+        public IEnumerable<T> GetAllWithFilter(Expression<Func<T, bool>>? filter, string? includeProperties = null)
+        {
+            IQueryable<T> query = dbSet;
+            query = query.Where(filter);
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var prop in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(prop);
                 }
