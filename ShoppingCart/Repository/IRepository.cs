@@ -7,7 +7,7 @@ namespace ShoppingCart.Repository
     {
         IEnumerable<T> GetAll(string? includeProperties = null);
         IEnumerable<T> GetAllWithFilter(Expression<Func<T, bool>>? filter, string? includeProperties = null);
-        T Get(Expression<Func<T, bool>> filter);
+
         IList<T> GetAll(Expression<Func<T, bool>> filter);
 
 		T Get(Expression<Func<T, bool>> filter);

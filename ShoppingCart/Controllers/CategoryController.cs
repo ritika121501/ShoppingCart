@@ -59,7 +59,7 @@ namespace ShoppingCart.Controllers
 			if (ModelState.IsValid)
             {
 
-                if (category.CategoryId == null || category.CategoryId == 0)
+                if (category.CategoryId == 0)
                 {
                     _repo.Insert(category);
                     _toastNotification.AddSuccessToastMessage("Category Added Successfully");
