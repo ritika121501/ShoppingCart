@@ -28,7 +28,14 @@ namespace ShoppingCart.Repository
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+		public IList<T> GetAll(Expression<Func<T, bool>> filter)
+		{
+			IQueryable<T> query = dbSet;
+			query = query.Where(filter);
+			return query.ToList();
+		}
+
+		public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             
