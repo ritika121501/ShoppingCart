@@ -16,6 +16,10 @@ namespace ShoppingCart.Data
 
 		public DbSet<Company> Company { get; set; }
         public DbSet<Cart> Cart { get; set; }
+
+        public DbSet<State> State { get; set; }
+
+        public DbSet<City> City { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,7 +38,7 @@ namespace ShoppingCart.Data
                     Author = "Harper Lee",
                     Description = "believed to be one of the most influential authors to have ever existed, famously published only a single novel",
                     ISBN = "SWV0001",
-                    //ListPrice = 99,
+                    ListPrice = 99.0,
                     CategoryId = 1,
                     ImageUrl = ""
                 },
@@ -45,7 +49,7 @@ namespace ShoppingCart.Data
                     Author = "Nick Carraway",
                     Description = "is distinguished as one of the greatest texts for introducing students to the art of reading literature critically ",
                     ISBN = "SWV00078",
-                    //ListPrice = 100,
+                    ListPrice = 100.0,
                     CategoryId = 1,
                     ImageUrl = ""
                 },
@@ -56,10 +60,30 @@ namespace ShoppingCart.Data
                     Author = "Gabriel García Márquez",
                     Description = "The novel tells the story of seven generations of the Buendía family and follows the establishment of their town",
                     ISBN = "SWV0002",
-                    //ListPrice = 101,
+                    ListPrice = 101.0,
                     CategoryId = 1,
                     ImageUrl = ""
-                }); ;
+                });
+
+            modelBuilder.Entity<State>().HasData(
+               new Models.State { StateId = 1, StateName = "Texas", StateCode = "TX" },
+               new Models.State { StateId = 2, StateName = "Ohio", StateCode = "OH" },
+               new Models.State { StateId = 3, StateName = "North Carolina", StateCode = "NC" },
+               new Models.State { StateId = 4, StateName = "Georgia", StateCode = "GA" },
+               new Models.State { StateId = 5, StateName = "Delaware", StateCode = "DC" }
+               );
+            modelBuilder.Entity<City>().HasData(
+                new Models.City { CityId = 1, CityName = "Sugar Land", StateId = 1 },
+                new Models.City { CityId = 2, CityName = "Houston", StateId = 1 },
+                new Models.City { CityId = 3, CityName = "Columbus", StateId = 2 },
+                new Models.City { CityId = 4, CityName = "Dublin", StateId = 2 },
+                new Models.City { CityId = 7, CityName = "Cary", StateId = 3 },
+                new Models.City { CityId = 8, CityName = "WinstonSalem", StateId = 3 },
+                new Models.City { CityId = 9, CityName = "Kennesaw", StateId = 4 },
+                new Models.City { CityId = 10, CityName = "Rosswell", StateId = 4 },
+                new Models.City { CityId = 11, CityName = "Wilmington", StateId = 5 }
+
+                );
         }
     }
 }
