@@ -14,8 +14,10 @@ namespace ShoppingCart.Data
         public DbSet<Category> Category { get; set; }
         public DbSet<Product> Products { get; set; }
 
-		public DbSet<Company> Company { get; set; }
+        public DbSet<Company> Company { get; set; }
         public DbSet<Cart> Cart { get; set; }
+        public DbSet<State> State { get; set; }
+        public DbSet<City> City { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -59,7 +61,26 @@ namespace ShoppingCart.Data
                     //ListPrice = 101,
                     CategoryId = 1,
                     ImageUrl = ""
-                }); ;
+                });
+            modelBuilder.Entity<State>().HasData(
+              new Models.State { StateId = 1, StateName = "Texas", StateCode = "TX" },
+              new Models.State { StateId = 2, StateName = "Ohio", StateCode = "OH" },
+              new Models.State { StateId = 3, StateName = "North Carolina", StateCode = "NC" },
+              new Models.State { StateId = 4, StateName = "Georgia", StateCode = "GA" },
+              new Models.State { StateId = 5, StateName = "Delaware", StateCode = "DC" }
+              );
+            modelBuilder.Entity<City>().HasData(
+                new Models.City { CityId = 1, CityName = "Sugar Land", StateId = 1 },
+                new Models.City { CityId = 2, CityName = "Houston", StateId = 1 },
+                new Models.City { CityId = 3, CityName = "Columbus", StateId = 2 },
+                new Models.City { CityId = 4, CityName = "Dublin", StateId = 2 },
+                new Models.City { CityId = 7, CityName = "Cary", StateId = 3 },
+                new Models.City { CityId = 8, CityName = "WinstonSalem", StateId = 3 },
+                new Models.City { CityId = 9, CityName = "Kennesaw", StateId = 4 },
+                new Models.City { CityId = 10, CityName = "Rosswell", StateId = 4 },
+                new Models.City { CityId = 11, CityName = "Wilmington", StateId = 5 }
+
+                );
         }
     }
 }
