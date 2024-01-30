@@ -74,11 +74,11 @@ namespace ShoppingCart.Data
                 new Models.City { CityId = 2, CityName = "Houston", StateId = 1 },
                 new Models.City { CityId = 3, CityName = "Columbus", StateId = 2 },
                 new Models.City { CityId = 4, CityName = "Dublin", StateId = 2 },
-                new Models.City { CityId = 7, CityName = "Cary", StateId = 3 },
-                new Models.City { CityId = 8, CityName = "WinstonSalem", StateId = 3 },
-                new Models.City { CityId = 9, CityName = "Kennesaw", StateId = 4 },
-                new Models.City { CityId = 10, CityName = "Rosswell", StateId = 4 },
-                new Models.City { CityId = 11, CityName = "Wilmington", StateId = 5 }
+                new Models.City { CityId = 5, CityName = "Cary", StateId = 3 },
+                new Models.City { CityId = 6, CityName = "WinstonSalem", StateId = 3 },
+                new Models.City { CityId = 7, CityName = "Kennesaw", StateId = 4 },
+                new Models.City { CityId = 8, CityName = "Rosswell", StateId = 4 },
+                new Models.City { CityId = 9, CityName = "Wilmington", StateId = 5 }
 
                 );
         }
