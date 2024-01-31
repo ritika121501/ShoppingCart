@@ -22,6 +22,8 @@ builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<IRepository<Company>, Repository<Company>>();
 builder.Services.AddScoped<IRepository<Cart>, Repository<Cart>>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IRepository<State>, Repository<State>>();
+builder.Services.AddScoped<IRepository<City>, Repository<City>>();
 
 //Add Toast notification service
 builder.Services.AddRazorPages().AddNToastNotifyNoty(new NotyOptions

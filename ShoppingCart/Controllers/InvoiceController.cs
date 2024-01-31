@@ -30,6 +30,7 @@ namespace ShoppingCart.Controllers
 			};
 			foreach (var c in CartVm.Carts)
 			{
+
 				//c.Product.ListPrice = (int)GetPriceBasedOnQuantity(c);
 				//CartVm.OrderTotal += c.Product.ListPrice * c.Count;
 
@@ -37,7 +38,7 @@ namespace ShoppingCart.Controllers
                 CartVm.OrderTotal += priceBasedonQuantity;
             }
 			
-		
+
 			return View(CartVm);
 
 		}

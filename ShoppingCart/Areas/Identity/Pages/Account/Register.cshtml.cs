@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using ShoppingCart.Models;
+using ShoppingCart.Repository;
 using ShoppingCart.Utility;
 
 namespace ShoppingCart.Areas.Identity.Pages.Account
@@ -34,6 +35,8 @@ namespace ShoppingCart.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IRepository<State> _stateNames;
+        private readonly IRepository<City> _cityNames;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -41,7 +44,11 @@ namespace ShoppingCart.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager,
+            IRepository<State> stateNames,
+            IRepository<City> cityNames
+            )
+
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -50,6 +57,9 @@ namespace ShoppingCart.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _stateNames = stateNames;
+            _cityNames = cityNames;
+
         }
 
         /// <summary>
@@ -109,13 +119,31 @@ namespace ShoppingCart.Areas.Identity.Pages.Account
 
             [ValidateNever]
             public string Role { get; set; }
-            
+
+            [ValidateNever]
+            public IEnumerable<SelectListItem> CityList { get; set; }
+
+            [ValidateNever]
+            public string City { get; set; }
+
+            [ValidateNever]
+            public IEnumerable<SelectListItem> StateList { get; set; }
+
+            [ValidateNever]
+            public string State { get; set; }
+
+            [ValidateNever]
+            public string StreetAddress { get; set; }
+
+            [ValidateNever]
+            public string PostalCode { get; set; }
+
         }
 
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if(!_roleManager.RoleExistsAsync(RolesConstant.Role_Customer).GetAwaiter().GetResult())
+            if (!_roleManager.RoleExistsAsync(RolesConstant.Role_Customer).GetAwaiter().GetResult())
             {
                 _roleManager.CreateAsync(new IdentityRole(RolesConstant.Role_Employee)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(RolesConstant.Role_Admin)).GetAwaiter().GetResult();
@@ -129,7 +157,19 @@ namespace ShoppingCart.Areas.Identity.Pages.Account
                 {
                     Text = i,
                     Value = i
+                }),
+                StateList = _stateNames.GetAll().Select(x => new SelectListItem
+                {
+                    Text = x.StateName,
+                    Value = x.StateName
+                }),
+
+                CityList = _cityNames.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.CityName,
+                    Value = i.CityName
                 })
+
             };
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
@@ -142,17 +182,23 @@ namespace ShoppingCart.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
+                user.StreetAddress = Input.StreetAddress;
+                user.State = Input.State;
+                user.City = Input.City;
+                user.postalCode = Input.PostalCode;
+
+
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
-                    if(!String.IsNullOrEmpty(Input.Role))
+                    if (!String.IsNullOrEmpty(Input.Role))
                     {
                         await _userManager.AddToRoleAsync(user, Input.Role);
                     }
-                    else 
+                    else
                     {
                         await _userManager.AddToRoleAsync(user, RolesConstant.Role_Customer);
                     }
