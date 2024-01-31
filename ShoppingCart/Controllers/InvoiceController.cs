@@ -28,11 +28,11 @@ namespace ShoppingCart.Controllers
 			};
 			foreach (var c in CartVm.Carts)
 			{
-				c.Product.ListPrice = (int)GetPriceBasedOnQuantity(c);
-				CartVm.OrderTotal += c.Product.ListPrice * c.Count;
+				int PriceBasedOnQuantity = (int)GetPriceBasedOnQuantity(c);
+				CartVm.OrderTotal += PriceBasedOnQuantity;
 			}
-			
-		
+
+
 			return View(CartVm);
 
 		}
